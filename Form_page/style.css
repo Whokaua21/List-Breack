@@ -1,0 +1,135 @@
+body{
+    background-color: #550476;
+}
+header a{
+    text-decoration: none;
+}
+header a div{
+    max-width: 100%;
+    color: white;
+}
+.Cadaster-user{
+    text-align: center;
+    margin: 0 auto;
+    background-color: #AB52CF;
+    max-width: 100%;
+    width: 80rem;
+}
+.title-register{
+    background-color: #280178;
+    margin: 0 auto;
+    width: 40rem;
+    max-width: 100%;
+    padding: 40px;
+    border-radius: 51px;
+}
+.title-register h2{
+    color: white;
+}
+.email-verfiy{
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+.email-verfiy,.password-verify{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.email-verfiy label,.password-verify label{
+    background-color: #280178;
+    width: 10rem;
+    border-radius: 51px;
+    color: white;
+}
+.email-verfiy label p,.password-verify label p{
+    margin-top: 10px;
+}
+.email-verfiy #write-email,.password-verify #write-password{
+    height: 4rem;
+    width: 40rem;
+    border-radius: 51px;
+    border: none;
+    background-color: #280178;
+    color: white;
+    text-align: center;
+}
+.email-verfiy #write-email:hover,.password-verify #write-password:hover,#write-name-user:hover{
+    background-color: #9E00FF;
+}
+.eyer-block{
+    display: flex;
+    justify-content: center;
+}
+.eyer-block #eyer-block-left::before{
+    content: '';
+    position: relative;
+    left: 30rem;
+    top: 10rem;
+    padding: 50px 50px 50px 70px;
+    border-radius: 100%;
+    background-color: #280178;
+}
+.eyer-block #eyer-block-right::before{
+    content: '';
+    position: relative;
+    right: 30rem;
+    top: 10rem;
+    padding: 50px 50px 50px 70px;
+    border-radius: 100%;
+    background-color: #280178;
+}
+#write-name-user{
+    border-radius: 51px;
+    background-color: #280178;
+    color: white;
+    text-align: center;
+    margin-top: 20rem;
+    max-width: 100%;
+    margin-bottom:5rem;
+    height: 4rem;
+    width: 40rem;
+    border: none;
+}
+#button-ready{
+    border: none;
+    margin-bottom: 20px;
+    height: 4rem;
+    width: 20rem;
+    background-color: #280178;
+    border-radius: 51px;
+    color: white;
+}
+#button-ready:hover{
+    background-color: #E81BD4;
+}
+#eyer-block-right:hover::before,#eyer-block-left:hover::before{
+    animation:eyer-right 2s ease;
+}
+@keyframes eyer-right{
+    0%{
+        box-shadow: 0px 0px 70px #0b0072;
+    }
+    50%{
+       box-shadow: 0px 0px 100px #160094;
+    }
+    75%{
+        box-shadow: 0px 0px 200px #002fff;
+    }
+}
+@media only screen and (max-width: 768px){
+    header div{
+        justify-content: center;
+    }
+    #write-name-user{
+        height: 3rem;
+    }
+    .eyer-block #eyer-block-right::before{
+        position: relative;
+        right: 10rem;
+    }
+    .eyer-block #eyer-block-left::before{
+        left: 10rem;
+
+    }
+}

@@ -224,12 +224,22 @@ header nav ul button:hover{
     .bar-buttons p{
         display: none;
     }
-}
-@media (max-width:1400px) {
+    .block-text{
+        border-radius: 38px 38px 38px 38px;
+    }
+    .text-into-block{
+        margin:0 auto;
+    }
+    .text-into-block div{
+        width: 100%;
+        border-radius: 0px 0px 0px 0px;
+    }
     header div{
         width: 900px;
         max-width: 100%;
     }
+}
+@media (max-width:1400px) {
     .banner-page{
         gap: 0px;
     }
