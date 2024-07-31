@@ -217,7 +217,7 @@ header nav ul button:hover{
         border-radius: 0px 0px 0px 0px;
     }
 }
-@media (max-width:1900px) {
+@media (max-width:19000px) {
     .banner-page img{
         margin: 0 auto;
     }
@@ -225,6 +225,7 @@ header nav ul button:hover{
         display: none;
     }
     .block-text{
+        margin: 0 auto;
         border-radius: 38px 38px 38px 38px;
     }
     .text-into-block{
@@ -241,6 +242,7 @@ header nav ul button:hover{
 }
 @media (max-width:1400px) {
     .banner-page{
+        margin: 0 auto;
         gap: 0px;
     }
     .text-into-block{

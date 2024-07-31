@@ -1,0 +1,138 @@
+.Box-Create{
+    display: none;
+    background-color: #5E17EB;
+    border: solid gray;
+    border-top: solid gray 5px;
+    border-radius: 0px 0px 51px 51px;
+    width: 50rem;
+    margin-bottom: 80px;
+    height: 59rem;
+    max-height: 100%;
+    max-width: 100%;
+    animation: Appear_Screen 1s ease ;
+}
+@keyframes Appear_Screen{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.Title-config-list{
+    text-align: center;
+    background-color: #280178;
+    width: 49.5rem;
+    height: 5rem;
+    margin: 0px 0px 0px -11px;
+}
+.Title-config-list svg{
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    color: white;
+}
+.Form-Create-list{
+    max-width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.Form-Create-list input{
+    max-width: 100%;
+    text-align: center;
+    width: 30rem;
+    margin: 0 auto;
+    border: none;
+    border-radius: 51px;
+    font-size: 25px;
+}
+.Form-Create-list label{
+    max-width: 100%;
+    background-color: #280178;
+    width: 15rem;
+    margin: 0 auto;
+    border-radius: 51px;
+}
+.Form-Create-list {
+    color: white;
+    font-size: 20px;
+}
+.Box-Create div h3{
+    color: white;
+    font-size:40px ;
+    padding-top: 20px;
+}
+.Box-Create form{
+    text-align: center;
+}
+.Conted-data{
+    background-color: white;
+    background-color: #5E17EB;
+    border-radius: 51px;
+    margin-bottom:80px ;
+}
+.Conted-data div{
+    color: white;
+    margin-top: 40px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#Describe-list{
+    text-align: start;
+    background-color: #280178;
+    border-radius: 51px;
+    padding: 15px;
+    width: 13rem;
+}
+.Radio-config label{
+    background-color: #280178;
+    width: 10rem;
+    border-radius: 51px;
+    padding: 15px;
+}
+#radio-button{
+    width: 30px;
+    height: 40px;
+    vertical-align: middle;
+}   
+#conted-list{
+    resize: none;
+    width: 100%;
+    width: 45rem;
+    height: 19rem;
+    border-radius: 18px;
+    border: 5px solid #5E17EB;
+    text-align: center;
+}
+#ButtonSub{
+    width: 13rem;
+    border-radius: 51px;
+    margin-top: 40px;
+    border: none;
+    background-color: #280178;
+    color: white;
+}
+#ButtonSub:hover{
+    background-color: #633bb3;
+}
+@media only screen and (max-width: 768px){
+    .Title-config-list{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .Box-Create{
+        overflow: auto;
+        border-radius: 0px;
+    }
+    .Radio-config{
+        flex-flow: column;
+    }
+    #conted-list{
+        width: 20rem;        
+    }
+}

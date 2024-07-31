@@ -127,9 +127,14 @@ header a div{
     .eyer-block #eyer-block-right::before{
         position: relative;
         right: 10rem;
+        padding-left: 40px;
+        padding-top: 40px;
+
     }
     .eyer-block #eyer-block-left::before{
         left: 10rem;
+        padding-left: 40px;
+        padding-top: 40px;
 
     }
 }
