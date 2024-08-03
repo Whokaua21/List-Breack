@@ -15,6 +15,14 @@ function CardsLists(){
     let listsSaves =  GetLists()
     listsSaves.forEach(element => {
         const boxLists = document.querySelector('.lists-fuction')
+        const TitleList = document.querySelector('.lists-fuction Card-List-javascript')
+        if (TitleList != 'null'){
+            console.log('ok');
+            const titleNone = document.querySelector('.lists-fuction p')
+            titleNone.style.display = 'none'
+            
+
+        }
         console.log(boxLists);
         const cardMadeJavascript = document.createElement('div')
         cardMadeJavascript.className = 'Card-List-javascript'
