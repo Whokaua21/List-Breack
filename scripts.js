@@ -10,6 +10,42 @@ function ExitCreateList(){
     const BoxCreateList = document.querySelector('.Box-Create')
     BoxCreateList.style.display = 'none'
 }
+
+function CardsLists(){
+    let listsSaves =  GetLists()
+    listsSaves.forEach(element => {
+        const boxLists = document.querySelector('.lists-fuction')
+        console.log(boxLists);
+        const cardMadeJavascript = document.createElement('div')
+        cardMadeJavascript.className = 'Card-List-javascript'
+    
+        const titleList = document.createElement('h4')
+        titleList.textContent = element['NameList']
+
+        const divBox = document.createElement('div')
+
+        const blockDesinegr = document.createElement('div')
+        blockDesinegr.className = 'block-Card'
+
+        const divButtonsCard = document.createElement('div')
+        divButtonsCard.className = 'Buttons-Card'
+
+        const buttonClick = document.createElement('button')
+        buttonClick.textContent = 'Click Here'
+
+        const buttonRemove = document.createElement('button')
+        buttonRemove.textContent = 'Remover'
+
+        
+        // Puting Elements into boxLists
+        boxLists.appendChild(cardMadeJavascript)
+        cardMadeJavascript.appendChild(titleList)
+        cardMadeJavascript.appendChild(divBox)
+        divBox.appendChild(blockDesinegr)
+        cardMadeJavascript.appendChild(divButtonsCard)
+        divButtonsCard.append(buttonClick,buttonRemove)
+    });
+}
 function DocumentJsonToApi(){
     try{
         const formCreateList = document.querySelector('.Form-Create-list')
@@ -39,11 +75,6 @@ function DocumentJsonToApi(){
             'Describe': describeList
         }
         SaveLists(object_list_Note)
-
-
-        
-
-        
     }
     catch (error){
         alert(`Dado Invalido: ${error}`)
@@ -58,6 +89,5 @@ ButtonCreateList.addEventListener('click',CreateListe)
 ButtonSubmitList.addEventListener('click',DocumentJsonToApi)
 ClickImgExit.addEventListener('click',ExitCreateList)
 // console.log(JSON.parse(localStorage.getItem('Lists')));
-let l = GetLists()
-console.log(l)
+CardsLists()
 // localStorage.clear()

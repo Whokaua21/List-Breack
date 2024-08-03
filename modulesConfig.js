@@ -16,7 +16,6 @@ export function SaveLists(arrayFromObjects){
 
 export function GetLists(){
     let listObject = JSON.parse(localStorage.getItem('lists'))
-    console.log(listObject);
     let ObjectFromJson = []
     listObject.forEach(element => {
         ObjectFromJson.push(JSON.parse(element))

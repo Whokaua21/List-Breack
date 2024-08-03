@@ -1,3 +1,7 @@
+/* Screan from create list */
+:root{
+    --ColorButtonCard:#8858e9
+}
 .Box-Create{
     display: none;
     background-color: #5E17EB;
@@ -120,6 +124,65 @@
 #ButtonSub:hover{
     background-color: #633bb3;
 }
+/* Cards Javascript */
+.lists-fuction{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.Card-List-javascript{
+    margin-top: 50px;
+    max-width: 100%;
+    background-color: #280178;
+    color: white !important;;
+    width: 16rem;
+    height: 25rem;
+    padding-top: 20px;
+    border-radius: 51px;
+    text-align: center;
+}
+.Card-List-javascript h4{
+    background-color: #5E17EB;
+    margin: 15px;
+    border-radius: 51px;
+}
+.block-Card{
+    margin-top: 20px;
+    margin: 40px;
+    background-color: #5E17EB;
+    padding: 50px;
+}
+#Designer-Box1::before{
+    content: ' ';
+    position:absolute;
+    top: 8000px;
+    background-color:gray;
+    padding: 80px;
+}
+.Buttons-Card{
+    display: flex;
+    flex-flow: column;
+    margin: 40px;
+    gap: 20px;
+}
+.Buttons-Card button{
+    color: white;
+    padding: 10px;
+    border-radius: 51px;
+    border: none;
+    background-color: #5E17EB;
+
+}
+.block-Card:hover{
+    background-color: #b108ff;
+}
+.Buttons-Card button:hover{
+    background-color: var(--ColorButtonCard);
+}
 @media only screen and (max-width: 768px){
     .Title-config-list{
         max-width: 100%;
@@ -134,5 +197,35 @@
     }
     #conted-list{
         width: 20rem;        
+    }
+    .Card-List-javascript{
+        border-radius: 51px;
+        margin: 10px;
+        width: 100%;
+        max-width: 100%;
+        height: 10rem;
+
+    }
+    .Card-List-javascript h4{
+        margin: 20px;
+        max-width: 100%;
+    }
+    .block-Card{
+        display: none;
+    }
+    .Buttons-Card{
+        margin: 0px;
+        flex-flow: row;
+        flex-wrap: wrap;
+    }
+    .Buttons-Card button{
+        margin: 0 auto;
+        width: 15rem;
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 525px) {
+    .Card-List-javascript{
+        height: 13rem;
     }
 }
