@@ -20,6 +20,11 @@ function CardsLists(){
     listsSaves.forEach(element => {
         const boxLists = document.querySelector('.lists-fuction')
         const TitleList = document.querySelector('.lists-fuction Card-List-javascript')
+        if (TitleList == 'null'){
+            console.log('ok');
+            const titleNone = document.querySelector('.lists-fuction p')
+            titleNone.style.display = 'block'
+        }
         if (TitleList != 'null'){
             console.log('ok');
             const titleNone = document.querySelector('.lists-fuction p')
@@ -68,11 +73,6 @@ function CardsLists(){
                     localStorage.setItem('lists', JSON.stringify(listsSaves))
                     break
                 }
-            }
-            if (TitleList == 'null'){
-                console.log('ok');
-                const titleNone = document.querySelector('.lists-fuction p')
-                titleNone.style.display = 'block'
             }
         })
 
