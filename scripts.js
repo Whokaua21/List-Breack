@@ -6,13 +6,17 @@ function CreateListe(){
 
   
 }
+
+
 function ExitCreateList(){
     const BoxCreateList = document.querySelector('.Box-Create')
     BoxCreateList.style.display = 'none'
 }
 
+
 function CardsLists(){
-    let listsSaves =  GetLists()
+    let listsSaves =  GetLists('lists')
+  
     listsSaves.forEach(element => {
         const boxLists = document.querySelector('.lists-fuction')
         const TitleList = document.querySelector('.lists-fuction Card-List-javascript')
@@ -20,8 +24,7 @@ function CardsLists(){
             console.log('ok');
             const titleNone = document.querySelector('.lists-fuction p')
             titleNone.style.display = 'none'
-            
-
+        
         }
         console.log(boxLists);
         const cardMadeJavascript = document.createElement('div')
@@ -52,8 +55,32 @@ function CardsLists(){
         divBox.appendChild(blockDesinegr)
         cardMadeJavascript.appendChild(divButtonsCard)
         divButtonsCard.append(buttonClick,buttonRemove)
+
+        // Config remove button
+        buttonRemove.addEventListener('click', () => {
+            cardMadeJavascript.remove()
+            console.log(titleList);
+            for (let i of listsSaves){
+                if (i['NameList'] == titleList.textContent){
+                    listsSaves.splice(listsSaves.indexOf(i),1)
+                    console.log('ok');
+                    localStorage.clear()
+                    localStorage.setItem('lists', JSON.stringify(listsSaves))
+                    break
+                }
+            }
+            if (TitleList != 'null'){
+                console.log('ok');
+                const titleNone = document.querySelector('.lists-fuction p')
+                titleNone.style.display = 'block'
+            }
+        })
+
+        // Config click button
     });
 }
+
+
 function DocumentJsonToApi(){
     try{
         const formCreateList = document.querySelector('.Form-Create-list')
@@ -82,13 +109,21 @@ function DocumentJsonToApi(){
             'TypeList': RadioChoise,
             'Describe': describeList
         }
-        SaveLists(object_list_Note)
+        if (RadioChoise == 'radioList'){
+            SaveLists(object_list_Note,'lists')
+        }
+        if (RadioChoise == 'radioCheck'){
+            SaveLists(object_list_Note,'check')
+        }
     }
     catch (error){
         alert(`Dado Invalido: ${error}`)
 
     }
 }
+
+
+
 const ClickImgExit = document.querySelector('.Title-config-list svg')
 const ButtonCreateList = document.getElementById('Button-create-list')
 const ButtonCreateNote = document.getElementById('Button-create-Note')

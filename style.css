@@ -172,12 +172,12 @@ header nav ul button:hover{
     padding-top: 10px;
 }
 .lists-fuction,.note-function,.check-function{
-    padding: 80px;
+    padding: px;
 }
 .lists-fuction p,.note-function p,.check-function p{
     display: block;
     text-align: center;
-    margin-bottom: 90px;
+    margin: 90px;
     color: #b1b1b1;
 }
 @media only screen and (max-width: 768px) {
