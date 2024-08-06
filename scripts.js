@@ -69,7 +69,7 @@ function CardsLists(){
                     break
                 }
             }
-            if (TitleList != 'null'){
+            if (TitleList == 'null'){
                 console.log('ok');
                 const titleNone = document.querySelector('.lists-fuction p')
                 titleNone.style.display = 'block'
